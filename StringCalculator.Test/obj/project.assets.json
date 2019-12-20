@@ -5869,23 +5869,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Users\\syw\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\source\\repos\\stringcalculator\\StringCalculator.Test\\StringCalculator.Test.csproj",
+      "projectUniqueName": "C:\\Users\\syw\\source\\repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj",
       "projectName": "StringCalculator.Test",
-      "projectPath": "C:\\Users\\HP\\source\\repos\\stringcalculator\\StringCalculator.Test\\StringCalculator.Test.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\source\\repos\\stringcalculator\\StringCalculator.Test\\obj\\",
+      "projectPath": "C:\\Users\\syw\\source\\repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj",
+      "packagesPath": "C:\\Users\\syw\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\syw\\source\\repos\\StringCalculator\\StringCalculator.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\syw\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5898,8 +5898,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\HP\\source\\repos\\stringcalculator\\StringCalculator\\StringCalculator.csproj": {
-              "projectPath": "C:\\Users\\HP\\source\\repos\\stringcalculator\\StringCalculator\\StringCalculator.csproj"
+            "C:\\Users\\syw\\source\\repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj": {
+              "projectPath": "C:\\Users\\syw\\source\\repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj"
             }
           }
         }

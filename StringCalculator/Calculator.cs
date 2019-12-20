@@ -7,12 +7,24 @@ namespace StringCalculator
 {
     public class Calculator
     {
-        public int Add(string numbers)
-        {
-            if (String.IsNullOrWhiteSpace(numbers)) return 0;
+        private readonly IValidateInput _validateInput;
 
-            var stringArray = numbers.Split(",");
-            var intArray = Convert(stringArray);
+        public Calculator(IValidateInput validateInput)
+        {
+            _validateInput = validateInput;
+        }
+
+        public int Add(string numbers, char seperator)
+        {           
+            if (_validateInput.EmptyStringInput(numbers)) return 0;
+
+            if (!numbers.Contains(seperator)) return Int32.Parse(numbers);
+
+            var trimmedNumbers = _validateInput.RemoveTrailingCommas(numbers);
+
+            var stringArray = trimmedNumbers.Split(seperator);
+            var intArray = ConvertStringArrayToIntArray(stringArray);
+
             int total = 0;
             foreach (var integer in intArray)
             {
@@ -21,13 +33,11 @@ namespace StringCalculator
             return total;            
         }
 
-        public int[] Convert(string[] stringArray)
+        public int[] ConvertStringArrayToIntArray(string[] stringArray)
         {
-            int[] intArray = new int[] { };           
-
-            stringArray.CopyTo(intArray, 0);
+            var intArray = Array.ConvertAll(stringArray, Int32.Parse);
 
             return intArray;
-        }
+        }         
     }
 }
