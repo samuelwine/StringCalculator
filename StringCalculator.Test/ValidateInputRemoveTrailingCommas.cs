@@ -5,18 +5,19 @@ using Xunit;
 
 namespace StringCalculator.Test
 {
-    public class ValidateInputRemoveTrailingCommas
+    public class ValidateInputRemoveTrailingSeperator
     {
         public ValidateInput inputValidator { get; set; } = new ValidateInput();
 
         [Theory]
-        [InlineData("3,4,5,","5")]
-        [InlineData("3,4,5,,","5")]
-        [InlineData("3,4,5,,,","5")]
-        public void AddsZeroForTrailingCommas(string input, string output)
+        [InlineData("3,4,5,", "5", ",")]
+        [InlineData("4,5,6,,", "6", ",")]
+        [InlineData("7,8,9,,,", "9", ",")]
+        [InlineData("7\n8\n9\n\n\n", "9", "\n")]
+        public void ReturnsStringwithoutTrailingSeperator(string input, string output, string seperator)
         {
             //  Act
-            var result = inputValidator.RemoveTrailingCommas(input);
+            var result = inputValidator.RemoveTrailingSeperator(input, seperator);
 
             //  Assert
             Assert.EndsWith(output, result);

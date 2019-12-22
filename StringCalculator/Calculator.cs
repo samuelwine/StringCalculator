@@ -14,13 +14,13 @@ namespace StringCalculator
             _validateInput = validateInput;
         }
 
-        public int Add(string numbers, char seperator)
+        public int Add(string numbers, string seperator)
         {           
             if (_validateInput.EmptyStringInput(numbers)) return 0;
 
             if (!numbers.Contains(seperator)) return Int32.Parse(numbers);
 
-            var trimmedNumbers = _validateInput.RemoveTrailingCommas(numbers);
+            var trimmedNumbers = _validateInput.RemoveTrailingSeperator(numbers, seperator);
 
             var stringArray = trimmedNumbers.Split(seperator);
             var intArray = ConvertStringArrayToIntArray(stringArray);

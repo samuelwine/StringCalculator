@@ -13,9 +13,9 @@ namespace StringCalculator
             return false;
         }
 
-        public string RemoveTrailingCommas(string input)
+        public string RemoveTrailingSeperator(string input, string seperator)
         {
-            return input.TrimEnd(',');
+            return input.TrimEnd(seperator.ToCharArray());
         }
     }
 

@@ -4,6 +4,6 @@
     {
         bool EmptyStringInput(string input);
 
-        string RemoveTrailingCommas(string input);
+        string RemoveTrailingSeperator(string input, string seperator);
     }
 }
